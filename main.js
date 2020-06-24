@@ -1,6 +1,6 @@
-// const dateVisited = "visitDate"
-// const owed = "amountBilled"
-// const patient = "patientName"
+const dateVisited = "visitDate"
+const owed = "amountBilled"
+const patient = "patientName"
 
   allDoctorBills= [
  {
@@ -35,6 +35,37 @@
 const outputElement = document.querySelector("#doctorBills")
    allDoctorBills.forEach(doctorBill => {
     for(const value of Object.values(doctorBill)){
-        outputElement.inner += `<div>${value}</div>`
+        outputElement.innerHTML += `<div>${value}</div>`
     }
 })
+
+
+const firstDoctorBill = allDoctorBills[0]
+
+// Now iterate its keys
+outputElement.innerHTML += "<h1>Properties</h1>"
+for (const key of Object.keys(firstDoctorBill)) {
+  outputElement.innerHTML += `<div>${key}</div>`
+}
+
+// outputElement.innerHTML += "<h1>Doctor Bill List</h1>"
+
+// allDoctorBills.forEach(doctorBill => {
+//     outputElement.innerHTML += "<hr/>"
+
+//     for (const entry of Object.entries(doctorBill)) {
+//         outputElement.innerHTML += `<div>${entry[0]}: ${entry[1]}</div>`
+//     }
+// })
+// Iterate the array of cars. Individual objects stored in `car`.
+// outputElement.innerHTML += "<h1>Doctor Bill List</h1>"
+// allDoctorBills.forEach(doctorBill => {
+
+    // Iterate all of the values of the current car
+//     for (const value of Object.values(doctorBill)) {
+//       outputElement.innerHTML += `<div>${value}</div>`
+//     }
+// })
+
+
+
